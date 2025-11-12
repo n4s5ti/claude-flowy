@@ -135,35 +135,30 @@ export async function copyAgentFiles(targetDir, options = {}) {
  * Create agent directories structure
  */
 export async function createAgentDirectories(targetDir, dryRun = false) {
+  // Flat structure - all .md files directly in category folders
   const agentDirs = [
     '.claude',
     '.claude/agents',
     '.claude/agents/core',
-    '.claude/agents/swarm', 
+    '.claude/agents/swarm',
     '.claude/agents/hive-mind',
     '.claude/agents/consensus',
     '.claude/agents/optimization',
     '.claude/agents/github',
     '.claude/agents/sparc',
     '.claude/agents/testing',
-    '.claude/agents/testing/unit',
-    '.claude/agents/testing/validation',
     '.claude/agents/templates',
     '.claude/agents/analysis',
-    '.claude/agents/analysis/code-review',
     '.claude/agents/architecture',
-    '.claude/agents/architecture/system-design',
     '.claude/agents/data',
-    '.claude/agents/data/ml',
     '.claude/agents/development',
-    '.claude/agents/development/backend',
     '.claude/agents/devops',
-    '.claude/agents/devops/ci-cd',
     '.claude/agents/documentation',
-    '.claude/agents/documentation/api-docs',
     '.claude/agents/specialized',
-    '.claude/agents/specialized/mobile',
     '.claude/agents/flow-nexus',
+    '.claude/agents/goal',
+    '.claude/agents/neural',
+    '.claude/agents/reasoning',
     '.claude/commands',
     '.claude/commands/flow-nexus'
   ];
